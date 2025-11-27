@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - TheIndianEthnic.sg | Saved Sarees</title>
+    <meta name="description"
+        content="View your saved sarees and favorite items. Easily access your wishlist and make purchase inquiries.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-gem text-primary me-2"></i>
+                <span class="brand-text">TheIndianEthnic.sg</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html?category=all">All Sarees</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="products.html?category=silk">Silk Sarees</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=cotton">Cotton Sarees</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=designer">Designer Sarees</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=bridal">Bridal Collection</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=party">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3 position-relative">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search sarees..." autocomplete="off">
+                        <i class="fas fa-search search-icon"></i>
+                        <div class="search-dropdown" id="searchDropdown"></div>
+                    </div>
+                    <a href="wishlist.html" class="btn btn-outline-danger btn-sm me-2 position-relative active" title="My Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="wishlistBadge" style="font-size: 0.65rem;">
+                            0
+                        </span>
+                    </a>
+                    <a href="https://wa.me/919876543210" class="btn btn-success btn-sm" target="_blank">
+                        <i class="fab fa-whatsapp me-1"></i> Chat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active">My Wishlist</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-5 fw-bold mb-2">
+                        <i class="fas fa-heart text-danger me-2"></i>My Wishlist
+                    </h1>
+                    <p class="lead text-muted">Your favorite sarees saved for later</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishlist Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Wishlist Info -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-muted mb-0">
+                            <i class="fas fa-heart me-2"></i>
+                            <span id="wishlistCount">0</span> items in your wishlist
+                        </p>
+                        <button class="btn btn-outline-danger btn-sm" id="clearWishlistBtn" onclick="clearWishlist()">
+                            <i class="fas fa-trash me-1"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wishlist Items -->
+            <div class="row g-4" id="wishlistContainer">
+                <!-- Items will be loaded here dynamically -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="row d-none" id="emptyState">
+                <div class="col-12">
+                    <div class="text-center py-5">
+                        <i class="fas fa-heart-broken text-muted" style="font-size: 4rem;"></i>
+                        <h3 class="mt-4 mb-3">Your Wishlist is Empty</h3>
+                        <p class="text-muted mb-4">Start adding your favorite sarees to your wishlist!</p>
+                        <a href="products.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-shopping-bag me-2"></i>Browse Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="footer-brand mb-4">
+                        <h4 class="fw-bold">
+                            <i class="fas fa-gem text-primary me-2"></i>
+                            TheIndianEthnic.sg
+                        </h4>
+                        <p class="text-light">Your destination for premium quality sarees that blend traditional
+                            elegance with modern style. We bring you the finest collection from across India.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/TheIndianEthnicSG" class="text-white me-3" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fs-5"></i></a>
+                        <a href="https://instagram.com/TheIndianEthnicSG" class="text-white me-3" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fs-5"></i></a>
+                        <a href="https://wa.me/919876543210" class="text-white me-3" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                        <a href="https://youtube.com/@TheIndianEthnicSG" class="text-white" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html?category=silk" class="text-light text-decoration-none">Silk Sarees</a></li>
+                        <li class="mb-2"><a href="products.html?category=cotton" class="text-light text-decoration-none">Cotton Sarees</a></li>
+                        <li class="mb-2"><a href="products.html?category=designer" class="text-light text-decoration-none">Designer</a></li>
+                        <li class="mb-2"><a href="products.html?category=bridal" class="text-light text-decoration-none">Bridal Collection</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Policies</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="refund-shipping.html" class="text-light text-decoration-none">Refund & Shipping</a></li>
+                        <li class="mb-2"><a href="terms-of-service.html" class="text-light text-decoration-none">Terms of Service</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="faqs.html" class="text-light text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3">Contact Info</h5>
+                    <div class="contact-info">
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            info@TheIndianEthnic.sg
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-clock me-2"></i>
+                            Mon - Sat: 10:00 AM - 8:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 TheIndianEthnic.sg. All rights reserved. | Designed with ❤️ for wifey and saree lovers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DOMPurify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+    <!-- Google Analytics Configuration -->
+    <script>
+        window.GA_MEASUREMENT_ID = 'G-EQ0KVEEGXX';
+    </script>
+    <!-- Cookie Consent -->
+    <script src="/js/cookie-consent.js"></script>
+    <!-- Google Analytics -->
+    <script src="/js/analytics.js"></script>
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+    <!-- Wishlist JS -->
+    <script>
+        // Load and display wishlist items
+        function loadWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('saree_wishlist') || '[]');
+            const container = document.getElementById('wishlistContainer');
+            const emptyState = document.getElementById('emptyState');
+            const countElement = document.getElementById('wishlistCount');
+            const clearBtn = document.getElementById('clearWishlistBtn');
+
+            // Update count
+            countElement.textContent = wishlist.length;
+
+            if (wishlist.length === 0) {
+                container.classList.add('d-none');
+                emptyState.classList.remove('d-none');
+                clearBtn.classList.add('d-none');
+                return;
+            }
+
+            container.classList.remove('d-none');
+            emptyState.classList.add('d-none');
+            clearBtn.classList.remove('d-none');
+
+            // Display wishlist items
+            container.innerHTML = DOMPurify.sanitize(wishlist.map(item => `
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="position-relative">
+                            <img src="${item.image}" class="card-img-top" alt="${item.name}" 
+                                 style="height: 250px; object-fit: cover;">
+                            <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 remove-wishlist-item" 
+                                    data-product-id="${item.id}"
+                                    title="Remove from wishlist">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2 align-self-start">${item.category}</span>
+                            <h5 class="card-title fw-bold">${item.name}</h5>
+                            <p class="card-text text-primary fw-bold fs-5 mb-3">₹${item.price.toLocaleString()}</p>
+                            <div class="mt-auto d-grid gap-2">
+                                <a href="products.html?product=${item.id}" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-eye me-1"></i> View Details
+                                </a>
+                                <a href="https://wa.me/919876543210?text=Hi! I'm interested in ${encodeURIComponent(item.name)} (₹${item.price})" 
+                                   class="btn btn-success btn-sm" target="_blank">
+                                    <i class="fab fa-whatsapp me-1"></i> Inquire
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join(''));
+
+            // Add event listeners to remove buttons using event delegation
+            const removeButtons = container.querySelectorAll('.remove-wishlist-item');
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-product-id'));
+                    removeFromWishlist(productId);
+                });
+            });
+        }
+
+        // Remove item from wishlist
+        function removeFromWishlist(productId) {
+            let wishlist = JSON.parse(localStorage.getItem('saree_wishlist') || '[]');
+            wishlist = wishlist.filter(item => item.id !== productId);
+            localStorage.setItem('saree_wishlist', JSON.stringify(wishlist));
+            loadWishlist();
+            showToast('Removed from wishlist', 'info');
+            
+            // Update wishlist badge
+            if (typeof updateWishlistBadge === 'function') {
+                updateWishlistBadge();
+            }
+        }
+
+        // Clear entire wishlist
+        function clearWishlist() {
+            if (confirm('Are you sure you want to clear your entire wishlist?')) {
+                localStorage.removeItem('saree_wishlist');
+                loadWishlist();
+                showToast('Wishlist cleared', 'info');
+                
+                // Update wishlist badge
+                if (typeof updateWishlistBadge === 'function') {
+                    updateWishlistBadge();
+                }
+            }
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type === 'success' ? 'success' : type === 'info' ? 'info' : 'danger'} border-0`;
+            toast.setAttribute('role', 'alert');
+            toast.setAttribute('aria-live', 'assertive');
+            toast.setAttribute('aria-atomic', 'true');
+
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">${message}</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            `;
+
+            let toastContainer = document.getElementById('toast-container');
+            if (!toastContainer) {
+                toastContainer = document.createElement('div');
+                toastContainer.id = 'toast-container';
+                toastContainer.className = 'toast-container position-fixed top-0 end-0 p-3';
+                toastContainer.style.zIndex = '1055';
+                document.body.appendChild(toastContainer);
+            }
+
+            toastContainer.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+
+            toast.addEventListener('hidden.bs.toast', () => toast.remove());
+        }
+
+        // Load wishlist on page load
+        document.addEventListener('DOMContentLoaded', loadWishlist);
+    </script>
+</body>
+
+</html>

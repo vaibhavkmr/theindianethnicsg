@@ -1,0 +1,10 @@
+# TheIndianEthnic.sg Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.theindianethnic.sg/sitemap.xml
+
+# Disallow admin or private directories
+Disallow: /data/

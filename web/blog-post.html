@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | TheIndianEthnic.sg</title>
+    <meta name="description" content="Read our latest blog post about sarees, styling tips, and care guides.">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-gem text-primary me-2"></i>
+                <span class="brand-text">TheIndianEthnic.sg</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html?category=all">All Sarees</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="products.html?category=silk">Silk Sarees</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=cotton">Cotton Sarees</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=designer">Designer Sarees</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=bridal">Bridal Collection</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=party">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="wishlist.html" class="btn btn-outline-danger btn-sm me-2 position-relative" title="My Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="wishlistBadge" style="font-size: 0.65rem;">
+                            0
+                        </span>
+                    </a>
+                    <a href="https://wa.me/919876543210" class="btn btn-success btn-sm" target="_blank">
+                        <i class="fab fa-whatsapp me-1"></i> Chat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                            <li class="breadcrumb-item active">Blog Post</li>
+                        </ol>
+                    </nav>
+
+                    <div class="mb-3">
+                        <span class="badge" id="postCategory">Loading...</span>
+                    </div>
+
+                    <h1 class="display-5 fw-bold mb-3" id="postTitle">Loading...</h1>
+
+                    <div class="text-muted mb-4" id="postMeta">
+                        <i class="fas fa-spinner fa-spin"></i> Loading...
+                    </div>
+
+                    <img id="postImage" 
+                         src="" 
+                         alt="Blog Post" 
+                         class="img-fluid rounded mb-4 shadow-sm"
+                         style="width: 100%; height: 400px; object-fit: cover;">
+
+                    <div class="blog-content" id="postContent">
+                        <div class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-top">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="blog.html" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Blog
+                            </a>
+                            <div>
+                                <a href="https://wa.me/919876543210?text=I have a question about this blog post" class="btn btn-success" target="_blank">
+                                    <i class="fab fa-whatsapp me-2"></i>Need Help?
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="footer-brand mb-4">
+                        <h4 class="fw-bold">
+                            <i class="fas fa-gem text-primary me-2"></i>
+                            TheIndianEthnic.sg
+                        </h4>
+                        <p class="text-light">Your destination for premium quality sarees that blend traditional elegance with modern style. We bring you the finest collection from across India.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/TheIndianEthnicSG" class="text-white me-3" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fs-5"></i></a>
+                        <a href="https://instagram.com/TheIndianEthnicSG" class="text-white me-3" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fs-5"></i></a>
+                        <a href="https://wa.me/919876543210" class="text-white me-3" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                        <a href="https://youtube.com/@TheIndianEthnicSG" class="text-white" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html?category=silk" class="text-light text-decoration-none">Silk Sarees</a></li>
+                        <li class="mb-2"><a href="products.html?category=cotton" class="text-light text-decoration-none">Cotton Sarees</a></li>
+                        <li class="mb-2"><a href="products.html?category=designer" class="text-light text-decoration-none">Designer</a></li>
+                        <li class="mb-2"><a href="products.html?category=bridal" class="text-light text-decoration-none">Bridal Collection</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Policies</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="refund-shipping.html" class="text-light text-decoration-none">Refund & Shipping</a></li>
+                        <li class="mb-2"><a href="terms-of-service.html" class="text-light text-decoration-none">Terms of Service</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="faqs.html" class="text-light text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3">Contact Info</h5>
+                    <div class="contact-info">
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            info@TheIndianEthnic.sg
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-clock me-2"></i>
+                            Mon - Sat: 10:00 AM - 8:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 TheIndianEthnic.sg. All rights reserved. | Designed with ❤️ for wifey and saree lovers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+    <!-- Google Analytics Configuration -->
+    <script>
+        window.GA_MEASUREMENT_ID = 'G-EQ0KVEEGXX';
+    </script>
+    <!-- Cookie Consent -->
+    <script src="/js/cookie-consent.js"></script>
+    <!-- Google Analytics -->
+    <script src="/js/analytics.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
+
+    <style>
+        .blog-content h2 {
+            color: #2d3748;
+            margin-top: 2rem;
+        }
+        
+        .blog-content h3, .blog-content h4 {
+            color: #4a5568;
+        }
+        
+        .blog-content p {
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        
+        .blog-content ul {
+            line-height: 2;
+            color: #4a5568;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #fff !important;
+        }
+    </style>
+</body>
+
+</html>

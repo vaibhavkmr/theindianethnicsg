@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheIndianEthnic.sg - Premium Collection | Traditional & Designer Sarees</title>
+  <meta name="description"
+    content="Discover our exquisite collection of silk, cotton, and designer sarees. Premium quality traditional wear with modern elegance.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-gem text-primary me-2"></i>
+        <span class="brand-text">TheIndianEthnic.sg</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="web/products.html?category=all">All Sarees</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="web/products.html?category=silk">Silk Sarees</a></li>
+              <li><a class="dropdown-item" href="web/products.html?category=cotton">Cotton Sarees</a></li>
+              <li><a class="dropdown-item" href="web/products.html?category=designer">Designer Sarees</a></li>
+              <li><a class="dropdown-item" href="web/products.html?category=bridal">Bridal Collection</a></li>
+              <li><a class="dropdown-item" href="web/products.html?category=party">Party Wear</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="web/about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="web/blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="web/contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="search-box me-3 position-relative">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search sarees..." autocomplete="off">
+            <i class="fas fa-search search-icon"></i>
+            <div class="search-dropdown" id="searchDropdown"></div>
+          </div>
+          <a href="web/wishlist.html" class="btn btn-outline-danger btn-sm me-2 position-relative" title="My Wishlist">
+            <i class="fas fa-heart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="wishlistBadge" style="font-size: 0.65rem;">
+              0
+            </span>
+          </a>
+          <a href="https://wa.me/919876543210" class="btn btn-success btn-sm" target="_blank">
+            <i class="fab fa-whatsapp me-1"></i> Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <!-- Indicators will be loaded from carousel.json -->
+      </div>
+
+      <div class="carousel-inner">
+        <!-- Carousel slides will be loaded from carousel.json -->
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-6 fw-bold">Shop by Category</h2>
+          <p class="text-muted">Explore our diverse collection of premium sarees</p>
+        </div>
+      </div>
+
+      <div class="row g-4" id="categoryGrid">
+        <!-- Categories will be loaded from products.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-6 fw-bold">Featured Products</h2>
+          <p class="text-muted">Handpicked sarees from our premium collection</p>
+        </div>
+      </div>
+
+      <div class="row g-4" id="featuredProducts">
+        <!-- Featured products will be loaded dynamically -->
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a href="web/products.html" class="btn btn-primary btn-lg">View All Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="display-6 fw-bold mb-4">Why Choose TheIndianEthnic.sg?</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="d-flex">
+                <i class="fas fa-medal text-primary fs-3 me-3"></i>
+                <div>
+                  <h5 class="fw-bold">Premium Quality</h5>
+                  <p class="text-muted">Handpicked fabrics and superior craftsmanship</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex">
+                <i class="fas fa-truck text-primary fs-3 me-3"></i>
+                <div>
+                  <h5 class="fw-bold">Fast Delivery</h5>
+                  <p class="text-muted">Quick and secure delivery nationwide</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex">
+                <i class="fas fa-heart text-primary fs-3 me-3"></i>
+                <div>
+                  <h5 class="fw-bold">Customer Care</h5>
+                  <p class="text-muted">Dedicated support for your satisfaction</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex">
+                <i class="fas fa-shield-alt text-primary fs-3 me-3"></i>
+                <div>
+                  <h5 class="fw-bold">Authentic Products</h5>
+                  <p class="text-muted">100% authentic and original designs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="/images/products/product-5-main.jpg"
+            alt="Our Store" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-6 fw-bold">What Our Customers Say</h2>
+          <p class="text-muted">Real experiences from our valued customers</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="testimonial-card bg-white p-4 rounded shadow-sm h-100">
+            <div class="stars mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="mb-4">"Absolutely stunning collection! The silk saree I bought exceeded my expectations. The
+              quality is exceptional and the service was wonderful."</p>
+            <div class="customer-info">
+              <strong>Priya Sharma</strong>
+              <small class="text-muted d-block">Mumbai</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="testimonial-card bg-white p-4 rounded shadow-sm h-100">
+            <div class="stars mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="mb-4">"Perfect for my wedding! The bridal collection is magnificent. Fast delivery and excellent
+              customer support made the experience seamless."</p>
+            <div class="customer-info">
+              <strong>Anjali Patel</strong>
+              <small class="text-muted d-block">Delhi</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="testimonial-card bg-white p-4 rounded shadow-sm h-100">
+            <div class="stars mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="mb-4">"Love the variety and quality! The cotton sarees are so comfortable and elegant. Highly
+              recommend for daily wear and special occasions."</p>
+            <div class="customer-info">
+              <strong>Meera Reddy</strong>
+              <small class="text-muted d-block">Bangalore</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="display-6 fw-bold mb-4">Ready to Find Your Perfect Saree?</h2>
+          <p class="lead mb-4">Connect with us on WhatsApp for personalized assistance and exclusive offers</p>
+          <a href="https://wa.me/919876543210?text=Hi! I'm interested in exploring your saree collection. Could you help me?"
+            class="btn btn-light btn-lg" target="_blank">
+            <i class="fab fa-whatsapp me-2"></i>Chat with Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="productModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="product-images">
+                <div class="main-image mb-3 position-relative">
+                  <a href="" id="modalImageLink" class="glightbox" data-gallery="product-gallery">
+                    <img id="modalMainImage" src="" alt="" class="img-fluid rounded w-100"
+                      style="height: 400px; object-fit: cover; cursor: zoom-in;">
+                  </a>
+                  <div class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 text-white px-3 py-2 rounded">
+                    <i class="fas fa-search-plus me-1"></i> Click to zoom
+                  </div>
+                </div>
+                <div class="thumbnail-images d-flex gap-2" id="modalThumbnails">
+                  <!-- Thumbnails will be added dynamically -->
+                </div>
+                <!-- Hidden gallery links for lightbox navigation -->
+                <div id="hiddenGallery" class="d-none"></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="product-details">
+                <h3 class="fw-bold mb-3" id="modalProductName"></h3>
+                <div class="price mb-3">
+                  <h4 class="text-primary fw-bold mb-0" id="modalProductPrice"></h4>
+                </div>
+                <div class="product-info mb-4">
+                  <p class="mb-2"><strong>Category:</strong> <span id="modalProductCategory"></span></p>
+                  <p class="mb-2"><strong>Material:</strong> <span id="modalProductMaterial"></span></p>
+                  <p class="mb-3"><strong>Description:</strong></p>
+                  <p class="text-muted" id="modalProductDescription"></p>
+                </div>
+                <div class="product-features mb-4">
+                  <h6 class="fw-bold mb-2">Features:</h6>
+                  <ul class="list-unstyled" id="modalProductFeatures">
+                    <!-- Features will be added dynamically -->
+                  </ul>
+                </div>
+                <div class="action-buttons">
+                  <button class="btn btn-success btn-lg w-100 mb-3" id="modalWhatsAppBtn">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    Enquire via WhatsApp
+                  </button>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <button class="btn btn-outline-primary w-100" onclick="shareProduct()">
+                        <i class="fas fa-share me-1"></i> Share
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="btn btn-outline-secondary w-100" onclick="addToWishlist()">
+                        <i class="far fa-heart me-1"></i> Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <div class="footer-brand mb-4">
+            <h4 class="fw-bold">
+              <i class="fas fa-gem text-primary me-2"></i>
+              TheIndianEthnic.sg
+            </h4>
+            <p class="text-light">Your destination for premium quality sarees that blend traditional elegance with
+              modern style. We bring you the finest collection from across India.</p>
+          </div>
+          <div class="social-links">
+            <a href="https://facebook.com/TheIndianEthnicSG" class="text-white me-3" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fs-5"></i></a>
+            <a href="https://instagram.com/TheIndianEthnicSG" class="text-white me-3" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fs-5"></i></a>
+            <a href="https://wa.me/919876543210" class="text-white me-3" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+            <a href="https://youtube.com/@TheIndianEthnicSG" class="text-white" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="web/products.html" class="text-light text-decoration-none">All Products</a></li>
+            <li class="mb-2"><a href="web/about.html" class="text-light text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="web/blog.html" class="text-light text-decoration-none">Blog</a></li>
+            <li class="mb-2"><a href="web/contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2">
+          <h5 class="fw-bold mb-3">Categories</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="web/products.html?category=silk" class="text-light text-decoration-none">Silk Sarees</a></li>
+            <li class="mb-2"><a href="web/products.html?category=cotton" class="text-light text-decoration-none">Cotton Sarees</a></li>
+            <li class="mb-2"><a href="web/products.html?category=designer" class="text-light text-decoration-none">Designer</a></li>
+            <li class="mb-2"><a href="web/products.html?category=bridal" class="text-light text-decoration-none">Bridal Collection</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2">
+          <h5 class="fw-bold mb-3">Policies</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="web/refund-shipping.html" class="text-light text-decoration-none">Refund & Shipping</a></li>
+            <li class="mb-2"><a href="web/terms-of-service.html" class="text-light text-decoration-none">Terms of Service</a></li>
+            <li class="mb-2"><a href="web/privacy-policy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
+            <li class="mb-2"><a href="web/faqs.html" class="text-light text-decoration-none">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="fw-bold mb-3">Contact Info</h5>
+          <div class="contact-info">
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2"></i>
+              info@TheIndianEthnic.sg
+            </p>
+            <p class="mb-0">
+              <i class="fas fa-clock me-2"></i>
+              Mon - Sat: 10:00 AM - 8:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0">&copy; 2025 TheIndianEthnic.sg. All rights reserved. | Designed with ❤️ for wifey and saree lovers</p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- DOMPurify JS -->
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+  <!-- Google Analytics Configuration -->
+  <script>
+    window.GA_MEASUREMENT_ID = 'G-EQ0KVEEGXX';
+  </script>
+  <!-- Cookie Consent -->
+  <script src="js/cookie-consent.js"></script>
+  <!-- Google Analytics -->
+  <script src="js/analytics.js"></script>
+  <!-- Custom JS -->
+  <script src="js/carousel.js"></script>
+  <script src="js/categories.js"></script>
+  <script src="js/main.js?v=6"></script>
+  <script src="js/products.js?v=6"></script>
+</body>
+
+</html>

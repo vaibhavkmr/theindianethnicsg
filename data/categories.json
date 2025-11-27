@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Silk Sarees",
+      "slug": "silk",
+      "description": "Luxurious silk sarees with intricate designs",
+      "buttonText": "Explore Collection"
+    },
+    {
+      "name": "Cotton Sarees",
+      "slug": "cotton",
+      "description": "Comfortable and elegant cotton sarees",
+      "buttonText": "Shop Cotton"
+    },
+    {
+      "name": "Designer Sarees",
+      "slug": "designer",
+      "description": "Contemporary designs for modern women",
+      "buttonText": "View Designs"
+    },
+    {
+      "name": "Bridal Collection",
+      "slug": "bridal",
+      "description": "Special sarees for your wedding day",
+      "buttonText": "Bridal Wear"
+    },
+    {
+      "name": "Party Wear",
+      "slug": "party",
+      "description": "Glamorous sarees for celebrations",
+      "buttonText": "Party Collection"
+    }
+  ]
+}

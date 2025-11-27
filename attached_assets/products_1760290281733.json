@@ -1,0 +1,266 @@
+{
+  "categories": [
+    "Silk Sarees",
+    "Cotton Sarees", 
+    "Designer Sarees",
+    "Bridal Collection",
+    "Party Wear"
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Royal Kanjeevaram Silk Saree",
+      "category": "Silk Sarees",
+      "price": 4500,
+      "material": "Pure Kanjeevaram Silk",
+      "images": [
+        "https://res.cloudinary.com/diq62ulpk/image/upload/v1759250355/saree_image1_wvvpf1.jpg",
+        "https://ik.imagekit.io/d7dejupab/saree_image1.jpg?updatedAt=1759250664751",
+        "https://quiet-cactus-9376c9.netlify.app/saree_image1.jpg",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a0883538-1a18-42f2-94bc-e882ec466782.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/79330ab8-a864-4b11-8714-39b5e4b40f98.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1a75fa0a-6c65-48f7-b6d8-8e0c0d2ddeb3.png"
+      ],
+      "description": "Exquisite handwoven Kanjeevaram silk saree with traditional motifs and rich gold zari work. Perfect for weddings and festive occasions.",
+      "features": [
+        "100% Pure Kanjeevaram Silk",
+        "Handwoven with gold zari",
+        "Traditional temple motifs",
+        "Rich color combination",
+        "Includes matching blouse piece"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Royal Kanjeevaram Silk Saree (₹4,500). Could you provide more details about the fabric and availability?"
+    },
+    {
+      "id": 2,
+      "name": "Elegant Banarasi Silk Saree",
+      "category": "Silk Sarees",
+      "price": 3800,
+      "material": "Pure Banarasi Silk",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7cd723d-3890-4797-ba39-359716cc6a73.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a229d6cf-d0d8-4199-9fd4-7ed26b5461aa.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39070184-6214-4aa0-9d30-6384753cf6cc.png"
+      ],
+      "description": "Beautiful Banarasi silk saree featuring intricate silver zari work and traditional motifs. A timeless piece for special occasions.",
+      "features": [
+        "Pure Banarasi Silk fabric",
+        "Silver zari work",
+        "Traditional Banarasi motifs",
+        "Comfortable drape",
+        "Matching blouse included"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Elegant Banarasi Silk Saree (₹3,800). Can you tell me more about the design and colors available?"
+    },
+    {
+      "id": 3,
+      "name": "Soft Cotton Daily Wear Saree",
+      "category": "Cotton Sarees",
+      "price": 1200,
+      "material": "Premium Cotton",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d77ab999-2ac9-49dd-b260-e753b162b5e6.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fcc32b1c-12df-4e3a-92b2-207e2e7dcce7.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81f39bac-8a70-44f8-8d6e-80975fd8c552.png"
+      ],
+      "description": "Comfortable and breathable cotton saree perfect for daily wear. Features simple yet elegant design with easy draping.",
+      "features": [
+        "100% Cotton fabric",
+        "Breathable and comfortable",
+        "Easy to maintain",
+        "Perfect for daily wear",
+        "Multiple color options"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Soft Cotton Daily Wear Saree (₹1,200). What colors do you have available?"
+    },
+    {
+      "id": 4,
+      "name": "Handloom Cotton Saree",
+      "category": "Cotton Sarees",
+      "price": 1800,
+      "material": "Handloom Cotton",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfbd3d26-83ec-487c-867c-5cbdf6b00592.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/766c59b4-6418-4811-acbd-b543b731d81b.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e3e3d41-726c-4a98-b7bf-c08c72052087.png"
+      ],
+      "description": "Beautiful handloom cotton saree with traditional weaving patterns. Supports local artisans and showcases authentic craftsmanship.",
+      "features": [
+        "Handloom woven cotton",
+        "Traditional patterns",
+        "Supports local artisans",
+        "Eco-friendly fabric",
+        "Unique texture"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Handloom Cotton Saree (₹1,800). Can you share more details about the handloom work?"
+    },
+    {
+      "id": 5,
+      "name": "Contemporary Designer Saree",
+      "category": "Designer Sarees",
+      "price": 5200,
+      "material": "Georgette with Embellishments",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4355477f-ce92-4d6e-9ac6-0f74983882bd.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/df0b11b1-a5f3-4708-91f4-7a38da168121.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9664e838-c80d-4346-87de-6e9bbbcd725f.png"
+      ],
+      "description": "Stunning contemporary designer saree with modern embellishments and unique design. Perfect for parties and formal events.",
+      "features": [
+        "Premium georgette fabric",
+        "Modern embellishments",
+        "Unique designer cut",
+        "Party wear perfect",
+        "Designer blouse included"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Contemporary Designer Saree (₹5,200). Could you show me more designer options?"
+    },
+    {
+      "id": 6,
+      "name": "Fusion Designer Saree",
+      "category": "Designer Sarees", 
+      "price": 4800,
+      "material": "Net with Embroidery",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f0f6863f-7433-4108-8663-c92c24e92f71.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d58d6b2-2d44-4206-bbd6-e99dfa5bb142.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1e3c4a26-c57f-43e0-8d10-c4c492e32beb.png"
+      ],
+      "description": "Elegant fusion designer saree combining traditional elements with modern aesthetics. Features intricate embroidery work.",
+      "features": [
+        "Premium net fabric",
+        "Intricate embroidery",
+        "Fusion design concept",
+        "Modern silhouette",
+        "Statement piece"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Fusion Designer Saree (₹4,800). What other fusion designs do you have?"
+    },
+    {
+      "id": 7,
+      "name": "Bridal Lehenga Saree",
+      "category": "Bridal Collection",
+      "price": 12000,
+      "material": "Heavy Silk with Zari Work",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c4692a2-8dad-4166-8565-1ef97341314f.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/86a878e0-a35b-4778-8a5d-a1b9ee4db53c.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aa804c2a-7dd3-4e5c-b366-1c30d6b34e10.png"
+      ],
+      "description": "Magnificent bridal lehenga saree with heavy zari work and traditional motifs. A perfect choice for your special wedding day.",
+      "features": [
+        "Heavy silk fabric",
+        "Extensive zari work",
+        "Traditional bridal motifs",
+        "Pre-stitched drape",
+        "Complete bridal set"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Bridal Lehenga Saree (₹12,000). I'm planning my wedding and would like to know more about bridal collections."
+    },
+    {
+      "id": 8,
+      "name": "Traditional Bridal Saree",
+      "category": "Bridal Collection",
+      "price": 9500,
+      "material": "Pure Silk with Gold Work",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/02e0eba1-5300-4b8f-8f28-0b9517c41b4e.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2d3c2e63-543d-4c76-8cc0-612b9a6ec2e1.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3231e10-4e4e-4018-82b7-44b008eb71ae.png"
+      ],
+      "description": "Classic traditional bridal saree with handcrafted gold work. Represents the timeless beauty of Indian bridal wear.",
+      "features": [
+        "Pure silk quality",
+        "Handcrafted gold work",
+        "Traditional bridal colors",
+        "Classic design",
+        "Heritage craftsmanship"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Traditional Bridal Saree (₹9,500). Can you help me choose the perfect bridal saree?"
+    },
+    {
+      "id": 9,
+      "name": "Party Wear Sequin Saree",
+      "category": "Party Wear",
+      "price": 3500,
+      "material": "Georgette with Sequins",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/168ffc3f-addb-4841-821c-226f69b711d8.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7960c40-378f-4c4d-aab4-589057b9b965.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f5f03eec-25b5-431f-90eb-60db46e50a32.png"
+      ],
+      "description": "Glamorous party wear saree with sequin work that sparkles under lights. Perfect for celebrations and evening events.",
+      "features": [
+        "Georgette fabric",
+        "All-over sequin work",
+        "Party perfect shimmer",
+        "Contemporary design",
+        "Easy to drape"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Party Wear Sequin Saree (₹3,500). I need it for a party this weekend. Is it available?"
+    },
+    {
+      "id": 10,
+      "name": "Cocktail Party Saree",
+      "category": "Party Wear",
+      "price": 4200,
+      "material": "Chiffon with Embellishments",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ec7d14d-096d-48c7-8a5b-06315114e201.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4d2d3c21-0844-4af5-8e88-749590bc97c3.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dd3cffa2-2d7e-46a7-9429-e22fb6a32680.png"
+      ],
+      "description": "Sophisticated cocktail party saree with delicate embellishments. Designed for upscale events and celebrations.",
+      "features": [
+        "Premium chiffon fabric",
+        "Delicate embellishments", 
+        "Sophisticated design",
+        "Cocktail party perfect",
+        "Elegant drape"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Cocktail Party Saree (₹4,200). Do you have this in other colors as well?"
+    },
+    {
+      "id": 11,
+      "name": "Festival Cotton Saree",
+      "category": "Cotton Sarees",
+      "price": 1500,
+      "material": "Cotton with Block Print",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4c2fa363-ad7f-4aab-8482-2eb6df6bbfd5.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/17ead3f3-51bb-4cc4-a840-8e1cf44bf7f4.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e473b453-89e7-4c9e-9d45-b9fa606dc326.png"
+      ],
+      "description": "Vibrant cotton saree with traditional block print designs. Perfect for festivals and cultural celebrations.",
+      "features": [
+        "Pure cotton fabric",
+        "Traditional block prints",
+        "Festival appropriate",
+        "Comfortable wear",
+        "Cultural significance"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Festival Cotton Saree (₹1,500). What block print patterns do you have available?"
+    },
+    {
+      "id": 12,
+      "name": "Luxury Silk Designer Saree",
+      "category": "Designer Sarees",
+      "price": 6800,
+      "material": "Pure Silk with Designer Work",
+      "images": [
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/020a3f6e-0c85-4921-a540-20bc2cc146d8.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/281a0780-4964-4091-aa14-2f8c3ae4e1ec.png",
+        "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fe76b2c3-ddae-4533-927a-fa735c0f10fa.png"
+      ],
+      "description": "Luxurious silk designer saree with exclusive designer work. A premium piece for those who appreciate fine craftsmanship.",
+      "features": [
+        "Premium silk fabric",
+        "Exclusive designer work",
+        "Luxury craftsmanship",
+        "Limited edition design",
+        "High-end finish"
+      ],
+      "whatsapp_message": "Hi! I'm interested in the Luxury Silk Designer Saree (₹6,800). Can you tell me more about this exclusive piece?"
+    }
+  ]
+}
