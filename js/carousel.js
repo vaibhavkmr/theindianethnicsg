@@ -4,7 +4,7 @@ let carouselData = [];
 // Load carousel data from JSON
 async function loadCarousel() {
     try {
-        const response = await fetch('data/carousel.json');
+        const response = await fetch(window.SITE_CONFIG.getPath('data/carousel.json'));
         const data = await response.json();
         carouselData = data.slides;
         renderCarousel();

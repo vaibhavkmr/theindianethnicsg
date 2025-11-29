@@ -2,7 +2,7 @@ let blogPosts = [];
 
 async function loadBlogPosts() {
     try {
-        const response = await fetch('../data/blog.json');
+        const response = await fetch(window.SITE_CONFIG.getPath('data/blog.json'));
         const data = await response.json();
         blogPosts = data.posts;
         renderBlogGrid();
@@ -19,7 +19,7 @@ function renderBlogGrid() {
         <div class="col-lg-4 col-md-6 col-sm-6">
             <a href="blog-post.html?slug=${post.slug}" class="text-decoration-none">
                 <article class="card h-100 border-0 shadow-sm blog-card">
-                    <img src="../${post.image}" 
+                    <img src="${window.SITE_CONFIG.getPath(post.image)}" 
                          alt="${post.title}" 
                          class="card-img-top" 
                          style="height: 250px; object-fit: cover;">
@@ -51,7 +51,7 @@ async function loadSinglePost() {
     }
 
     try {
-        const response = await fetch('../data/blog.json');
+        const response = await fetch(window.SITE_CONFIG.getPath('data/blog.json'));
         const data = await response.json();
         const post = data.posts.find(p => p.slug === slug);
         
@@ -102,7 +102,7 @@ function renderBlogPost(post) {
     }
     
     if (postImage) {
-        postImage.src = `../${post.image}`;
+        postImage.src = window.SITE_CONFIG.getPath(post.image);
         postImage.alt = post.title;
     }
     

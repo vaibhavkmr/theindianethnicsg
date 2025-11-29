@@ -292,7 +292,7 @@ function initializeBootstrapComponents() {
 async function loadProductsData() {
     try {
         showLoadingState(true);
-        const response = await fetch('/data/products.json');
+        const response = await fetch(window.SITE_CONFIG.getPath('data/products.json'));
         if (!response.ok) {
             throw new Error('Failed to load products data');
         }

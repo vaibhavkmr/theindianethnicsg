@@ -2,22 +2,13 @@
 let categoriesData = [];
 let productsData = [];
 
-
-function getBasePath() {
-  const pathParts = window.location.pathname.split('/');
-  if (pathParts.length > 1 && pathParts[1]) {
-    return '/' + pathParts[1] + '/';
-  }
-  return '/';
-}
-
 // Load categories and products data from JSON
 async function loadCategories() {
     try {
         // Load both categories and products data
         const [categoriesResponse, productsResponse] = await Promise.all([
-            fetch(basePath + 'data/categories.json'),
-            fetch(basePath + 'data/products.json')
+            fetch(window.SITE_CONFIG.getPath('data/categories.json')),
+            fetch(window.SITE_CONFIG.getPath('data/products.json'))
         ]);
         
         const categoriesJson = await categoriesResponse.json();
