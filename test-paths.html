@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Configuration Test - TheIndianEthnic.sg</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-section h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .info {
+            color: #007bff;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .image-test {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .image-test img {
+            max-width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        .image-test.loaded img {
+            border-color: #28a745;
+        }
+        .image-test.failed img {
+            border-color: #dc3545;
+        }
+        .image-test p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Path Configuration Test</h1>
+    <p>This page tests if <code>window.SITE_CONFIG.getPath()</code> is working correctly on GitHub Pages.</p>
+
+    <div class="test-section">
+        <h2>1. Configuration Check</h2>
+        <div id="configCheck">Loading...</div>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Path Generation Tests</h2>
+        <div id="pathTests">Loading...</div>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Data File Tests</h2>
+        <div id="dataTests">Loading...</div>
+        <button onclick="testDataFiles()">Test Data Files</button>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Image Loading Tests</h2>
+        <p>These images should load if paths are correct:</p>
+        <div id="imageTests"></div>
+        <button onclick="loadTestImages()">Load Test Images</button>
+    </div>
+
+    <script src="js/config.js?v=8"></script>
+    <script>
+        // Test 1: Configuration Check
+        function checkConfig() {
+            const output = document.getElementById('configCheck');
+
+            if (typeof window.SITE_CONFIG === 'undefined') {
+                output.innerHTML = '<p class="error">❌ SITE_CONFIG is not defined! Config.js did not load.</p>';
+                return;
+            }
+
+            const config = window.SITE_CONFIG;
+            let html = '<p class="success">✅ SITE_CONFIG is loaded!</p>';
+            html += '<pre>';
+            html += `Environment: ${config.isGitHubPages ? 'GitHub Pages' : 'Local/Other'}\n`;
+            html += `BASE_PATH: "${config.BASE_PATH}"\n`;
+            html += `BASE_URL: "${config.BASE_URL}"\n`;
+            html += `Hostname: "${window.location.hostname}"\n`;
+            html += '</pre>';
+
+            output.innerHTML = html;
+        }
+
+        // Test 2: Path Generation
+        function testPaths() {
+            const output = document.getElementById('pathTests');
+            const testPaths = [
+                'images/products/product-1-main.jpg',
+                '/images/products/product-2-main.jpg',
+                'data/products.json',
+                '/data/carousel.json',
+                'images/carousel/carousel-1.jpg'
+            ];
+
+            let html = '<table style="width: 100%; border-collapse: collapse;">';
+            html += '<tr style="background: #f8f9fa;"><th style="padding: 8px; border: 1px solid #ddd;">Input Path</th><th style="padding: 8px; border: 1px solid #ddd;">Generated Path</th></tr>';
+
+            testPaths.forEach(path => {
+                const result = window.SITE_CONFIG.getPath(path);
+                html += `<tr><td style="padding: 8px; border: 1px solid #ddd;">${path}</td><td style="padding: 8px; border: 1px solid #ddd; font-family: monospace;">${result}</td></tr>`;
+            });
+
+            html += '</table>';
+            output.innerHTML = html;
+        }
+
+        // Test 3: Data File Loading
+        async function testDataFiles() {
+            const output = document.getElementById('dataTests');
+            output.innerHTML = '<p class="info">Testing data files...</p>';
+
+            const dataFiles = [
+                'data/products.json',
+                'data/categories.json',
+                'data/carousel.json',
+                'data/blog.json'
+            ];
+
+            let results = '';
+
+            for (const file of dataFiles) {
+                const path = window.SITE_CONFIG.getPath(file);
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        results += `<p class="success">✅ ${file} - Status: ${response.status} OK</p>`;
+                    } else {
+                        results += `<p class="error">❌ ${file} - Status: ${response.status} ${response.statusText}</p>`;
+                    }
+                } catch (error) {
+                    results += `<p class="error">❌ ${file} - Error: ${error.message}</p>`;
+                }
+            }
+
+            output.innerHTML = results;
+        }
+
+        // Test 4: Image Loading
+        function loadTestImages() {
+            const output = document.getElementById('imageTests');
+            const testImages = [
+                '/images/products/product-1-main.jpg',
+                '/images/products/product-2-main.jpg',
+                '/images/products/product-5-main.jpg',
+                '/images/carousel/carousel-1.jpg',
+                '/images/carousel/carousel-2.jpg'
+            ];
+
+            let html = '';
+            testImages.forEach(imagePath => {
+                const fullPath = window.SITE_CONFIG.getPath(imagePath);
+                html += `
+                    <div class="image-test" data-path="${fullPath}">
+                        <img src="${fullPath}" alt="Test" onload="imageLoaded(this)" onerror="imageFailed(this)">
+                        <p><strong>Path:</strong></p>
+                        <p style="font-family: monospace; font-size: 10px;">${fullPath}</p>
+                        <p class="status">Loading...</p>
+                    </div>
+                `;
+            });
+
+            output.innerHTML = html;
+        }
+
+        function imageLoaded(img) {
+            const container = img.parentElement;
+            container.classList.add('loaded');
+            container.querySelector('.status').innerHTML = '<span class="success">✅ Loaded</span>';
+        }
+
+        function imageFailed(img) {
+            const container = img.parentElement;
+            container.classList.add('failed');
+            container.querySelector('.status').innerHTML = '<span class="error">❌ Failed (404)</span>';
+        }
+
+        // Run tests on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkConfig();
+            testPaths();
+        });
+    </script>
+</body>
+</html>
+

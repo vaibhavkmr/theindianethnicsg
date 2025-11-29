@@ -31,7 +31,7 @@ function renderCarousel() {
     // Build slides
     const slides = carouselData.map(slide => `
         <div class="carousel-item ${slide.active ? 'active' : ''}">
-            <div class="hero-slide" style="background-image: url('${slide.backgroundImage}');">
+            <div class="hero-slide" style="background-image: url('${window.SITE_CONFIG.getPath(slide.backgroundImage)}');">
                 <div class="hero-overlay"></div>
                 <div class="container">
                     <div class="row align-items-center min-vh-75">
