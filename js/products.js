@@ -356,11 +356,11 @@ function populateProductModal(product) {
     const mainImageElement = document.getElementById('modalMainImage');
     const imageLinkElement = document.getElementById('modalImageLink');
     if (mainImageElement) {
-        mainImageElement.src = product.images[0];
+        mainImageElement.src = window.SITE_CONFIG.getPath(product.images[0]);
         mainImageElement.alt = product.name;
     }
     if (imageLinkElement) {
-        imageLinkElement.href = product.images[0];
+        imageLinkElement.href = window.SITE_CONFIG.getPath(product.images[0]);
         imageLinkElement.setAttribute('data-glightbox', `title: ${product.name}; description: ${product.name} - Image 1`);
         imageLinkElement.setAttribute('data-gallery', 'product-gallery');
     }
@@ -374,7 +374,7 @@ function populateProductModal(product) {
         // Add all images except the first one to hidden gallery
         if (product.images.length > 1) {
             galleryContainer.innerHTML = DOMPurify.sanitize(product.images.slice(1).map((image, index) => `
-                <a href="${image}" class="glightbox d-none" 
+                <a href="${window.SITE_CONFIG.getPath(image)}" class="glightbox d-none" 
                    data-gallery="product-gallery"
                    data-glightbox="title: ${product.name}; description: ${product.name} - Image ${index + 2}">
                 </a>
@@ -386,7 +386,7 @@ function populateProductModal(product) {
     const thumbnailsContainer = document.getElementById('modalThumbnails');
     if (thumbnailsContainer && product.images.length > 1) {
         thumbnailsContainer.innerHTML = DOMPurify.sanitize(product.images.map((image, index) => `
-            <img src="${image}" alt="${product.name} ${index + 1}" 
+            <img src="${window.SITE_CONFIG.getPath(image)}" alt="${product.name} ${index + 1}" 
                  class="img-thumbnail ${index === 0 ? 'active' : ''}"
                  data-image-src="${image}"
                  data-image-index="${index}">
@@ -434,13 +434,13 @@ function changeMainImage(imageSrc, thumbnailElement, imageIndex) {
     const imageLink = document.getElementById('modalImageLink');
     
     if (mainImage) {
-        mainImage.src = imageSrc;
+        mainImage.src = window.SITE_CONFIG.getPath(imageSrc);
     }
     
     // Update the main image link and rebuild gallery with selected image first
     if (imageLink && currentProductData) {
         const productName = currentProductData.name;
-        imageLink.href = imageSrc;
+        imageLink.href = window.SITE_CONFIG.getPath(imageSrc);
         imageLink.setAttribute('data-glightbox', `title: ${productName}; description: ${productName} - Image ${imageIndex + 1}`);
         
         // Rebuild hidden gallery in correct order for navigation
@@ -466,7 +466,7 @@ function changeMainImage(imageSrc, thumbnailElement, imageIndex) {
             // Create gallery links in the correct order
             reorderedIndices.forEach(idx => {
                 const anchor = document.createElement('a');
-                anchor.href = currentProductData.images[idx];
+                anchor.href = window.SITE_CONFIG.getPath(currentProductData.images[idx]);
                 anchor.className = 'glightbox d-none';
                 anchor.setAttribute('data-gallery', 'product-gallery');
                 anchor.setAttribute('data-glightbox', `title: ${productName}; description: ${productName} - Image ${idx + 1}`);
@@ -524,7 +524,7 @@ function loadRelatedProducts(category) {
         <div class="col-lg-4 col-md-6 col-6">
             <div class="product-card" data-product-id="${product.id}">
                 <div class="product-image">
-                    <img src="${product.images[0]}" alt="${product.name}" class="img-fluid" loading="lazy">
+                    <img src="${window.SITE_CONFIG.getPath(product.images[0])}" alt="${product.name}" class="img-fluid" loading="lazy">
                     <div class="product-overlay">
                         <button class="btn btn-light btn-sm">
                             <i class="fas fa-eye me-1"></i> View Details

@@ -39,7 +39,7 @@ function renderCategories() {
             <div class="col-lg-3 col-md-6">
                 <div class="category-card text-center">
                     <div class="category-image mb-3">
-                        <img src="${categoryImage}" alt="${categoryData.name}" class="img-fluid rounded-circle">
+                        <img src="${window.SITE_CONFIG.getPath(categoryImage)}" alt="${categoryData.name}" class="img-fluid rounded-circle">
                     </div>
                     <h4 class="fw-bold mb-2">${categoryData.name}</h4>
                     <p class="text-muted mb-3">${categoryData.description}</p>

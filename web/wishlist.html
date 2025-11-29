@@ -270,7 +270,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="position-relative">
-                            <img src="${item.image}" class="card-img-top" alt="${item.name}" 
+                            <img src="${window.SITE_CONFIG.getPath(item.image)}" class="card-img-top" alt="${item.name}"
                                  style="height: 250px; object-fit: cover;">
                             <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 remove-wishlist-item" 
                                     data-product-id="${item.id}"

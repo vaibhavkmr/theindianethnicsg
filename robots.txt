@@ -1,4 +1,4 @@
-# TheIndianEthnic.sg Robots.txt
+git# TheIndianEthnic.sg Robots.txt
 
 User-agent: *
 Allow: /

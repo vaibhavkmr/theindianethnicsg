@@ -169,7 +169,7 @@ function handleSearchDropdown(event) {
     // Display results in dropdown
     searchDropdown.innerHTML = DOMPurify.sanitize(results.map(product => `
         <div class="search-dropdown-item" data-product-id="${product.id}">
-            <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
+            <img src="${window.SITE_CONFIG.getPath(product.images[0])}" alt="${product.name}" loading="lazy">
             <div class="search-dropdown-item-info">
                 <div class="search-dropdown-item-name">${product.name}</div>
                 <div class="search-dropdown-item-category">${product.category}</div>
@@ -339,7 +339,7 @@ function displayProducts(products) {
         <div class="col-lg-4 col-md-6 col-6 mb-4">
             <div class="product-card" data-product-id="${product.id}">
                 <div class="product-image">
-                    <img src="${product.images[0]}" alt="${product.name}" class="img-fluid" loading="lazy">
+                    <img src="${window.SITE_CONFIG.getPath(product.images[0])}" alt="${product.name}" class="img-fluid" loading="lazy">
                     <div class="product-overlay">
                         <button class="btn btn-light btn-sm">
                             <i class="fas fa-eye me-1"></i> View Details
@@ -374,7 +374,7 @@ function loadFeaturedProducts() {
         <div class="col-lg-4 col-md-6 col-6 mb-4">
             <div class="product-card" data-product-id="${product.id}">
                 <div class="product-image">
-                    <img src="${product.images[0]}" alt="${product.name}" class="img-fluid" loading="lazy">
+                    <img src="${window.SITE_CONFIG.getPath(product.images[0])}" alt="${product.name}" class="img-fluid" loading="lazy">
                     <div class="product-overlay">
                         <button class="btn btn-light btn-sm">
                             <i class="fas fa-eye me-1"></i> View Details
